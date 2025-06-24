@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-System Audit Dashboard - Final Version (English)
+System Audit Dashboard - (English)
 ---------------------------------------------------
 A centralized dashboard for monitoring Linux systems, providing a real-time overview of key system information:
   - Kernel version
