@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <title>System Audit Dashboard - Linux Monitoring | Bocaletto Luca</title>
+  <meta name="description" content="System Audit Dashboard is a centralized Linux system monitoring tool built with Python and Tkinter. It provides real-time system information including kernel version, OS details, logged-in user, processes, load averages, memory, and disk usage.">
+  <meta name="keywords" content="System Audit Dashboard, Linux, monitoring, system metrics, Tkinter, load average, Linux dashboard, Bocaletto Luca">
+  <meta name="author" content="Bocaletto Luca">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="System Audit Dashboard - Linux Monitoring">
+  <meta property="og:description" content="Monitor your Linux system in real-time with System Audit Dashboard.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/bocaletto-luca/SystemAuditDashboard">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=System+Audit+Dashboard">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="System Audit Dashboard - Linux Monitoring">
+  <meta name="twitter:description" content="A real-time Linux system monitoring dashboard built in Python with Tkinter.">
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=System+Audit+Dashboard">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <!-- Custom CSS -->
+  <style>
+    body {
+      padding-top: 70px;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #343a40;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 3rem;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1920x600.png?text=System+Audit+Dashboard') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    footer {
+      background-color: #343a40;
+      color: #ccc;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>System Audit Dashboard</h1>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Real-Time Linux Monitoring</h2>
+      <p class="lead">
+        Get a comprehensive overview of your Linux system's performance and health. Monitor kernel version, OS details, user information, processes, load averages, memory, and disk usage—all in real time.
+      </p>
+      <a href="https://github.com/bocaletto-luca/SystemAuditDashboard" class="btn btn-primary btn-lg" target="_blank">View on GitHub</a>
+    </div>
+  </section>
+  
+  <!-- Main Content -->
+  <main class="container">
+    <!-- About Section -->
+    <section id="about">
+      <h2>About System Audit Dashboard</h2>
+      <p>
+        System Audit Dashboard is a centralized Linux system monitoring tool developed in Python using Tkinter for the GUI.
+        It gathers key system metrics—including kernel version, operating system details, logged-in user, process and port counts,
+        load averages, available memory, and disk usage—and displays them in real time.
+      </p>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features">
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Real-Time Monitoring:</strong> Displays live data, updated periodically.</li>
+        <li><strong>Threaded Data Collection:</strong> Gathers system metrics in a separate thread to keep the GUI responsive.</li>
+        <li><strong>Configurable Update Interval:</strong> Set your preferred refresh rate using the dashboard settings.</li>
+        <li><strong>Interactive Load Average Graph:</strong> Visualize load average values for 1, 5, and 15 minutes with a dynamic bar chart.</li>
+        <li><strong>Comprehensive Metrics:</strong> Shows kernel version, OS details, logged-in user, processes, open ports, memory, and disk usage.</li>
+        <li><strong>Advanced Logging:</strong> All operations and errors are logged to <code>sys_audit_dashboard.log</code> for troubleshooting.</li>
+      </ul>
+    </section>
+    
+    <!-- Download Section -->
+    <section id="download">
+      <h2>Download</h2>
+      <p>
+        Download the latest version of the System Audit Dashboard from our 
+        <a href="https://github.com/bocaletto-luca/SystemAuditDashboard" target="_blank">GitHub repository</a>.
+      </p>
+      <p>
+        The repository contains two versions:
+      </p>
+      <ul>
+        <li><code>main_eng.py</code> – English version</li>
+        <li><code>main_ita.py</code> – Italian version</li>
+      </ul>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        For questions, issues, or contributions, please open an issue in our 
+        <a href="https://github.com/bocaletto-luca/SystemAuditDashboard/issues" target="_blank">GitHub Issues</a>,
+        or contact us at <a href="mailto:your.email@example.com">your.email@example.com</a>.
+      </p>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 System Audit Dashboard | Developed by <a href="https://github.com/bocaletto-luca" target="_blank">Bocaletto Luca</a></p>
+      <p>
+        <a href="https://github.com/bocaletto-luca/SystemAuditDashboard" target="_blank">GitHub Repository</a> | 
+        <a href="https://github.com/bocaletto-luca" target="_blank">GitHub Profile</a>
+      </p>
+    </div>
+  </footer>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
